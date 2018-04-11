@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仿小米商城官网</title>
+    <base target="_blank">
+    <style>
+        /*清除默认样式*/
+        body,h1,h2,p{
+            margin: 0;
+        }
+        
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style:none;
+        }
+        
+        body{
+            font-size: 12px;
+            font-family: "microsoft yahei";
+        }
+        
+        a{
+            text-decoration: none;
+            target: _blank;
+        }
+        
+        .header{
+            widows: 100%;
+            height: 40px;
+            background: #333;
+            min-width: 1226px;
+        }
+        
+        .container{
+            width: 1226px;
+            height: 40px;
+            /*background:yellow;*/
+            margin: 0 auto;
+        }
+        
+        .container .container_left{
+            width: 600px;
+            height: 40px;
+            /*background: gray;*/
+            float: left;
+            line-height: 40px;
+        }
+        
+        .container .container_right{
+            width: 210px;
+            height: 40px;
+            background: pink;
+            float: right;
+
+        }
+        
+        .container .container_left li{
+            float: left;
+        }
+
+        .container .container_left li a{
+            color: #b0b0b0;
+        }
+
+        .container .container_left li span{
+            color: #424242;
+            margin: 0 6px;
+        }
+
+        .container .container_left li a:hover{
+            color: #fff;
+        }
+
+        .container .container_right .login{
+            width: 68px;
+            height: 40px;
+            /*background: gray;*/
+            line-height: 40px;
+            float: left;
+        }
+
+        .container .container_right .login a{
+            color: #b0b0b0;
+        }
+
+        .container .container_right .login a:hover{
+            color: #fff;
+        }
+
+        .container .container_right .login span{
+            color: #424242;
+            margin: 0 4px;
+        }
+
+        .container .container_right .shopping{
+            width: 120px;
+            height: 40px;
+            background: #424242;
+            float: left;
+        }
+        
+
+    </style>
+    <link rel="stylesheet" href="css/iconfont/iconfont.css">
+</head>
+<body>
+    <!--顶部内容-->
+    <header class="header">
+        <div class="container">
+            <div class="container_left">
+                <ul>
+                    <li><a href="http://www.mi.com/index.html">小米商城</a><span>|</span></li>
+                    <li><a href="https://www.miui.com/">MIUI</a><span>|</span></li>
+                    <li><a href="https://iot.mi.com/index.html">loT</a><span>|</span></li>
+                    <li><a href="https://i.mi.com/">云服务</a><span>|</span></li>
+                    <li><a href="https://shuidi.mi.com/">水滴</a><span>|</span></li>
+                    <li><a href="https://jr.mi.com?from=micom">金融</a><span>|</span></li>
+                    <li><a href="https://youpin.mi.com/">有品</a><span>|</span></li>
+                    <li><a href="http://www.mi.com/#J_modal-globalSites">Select Region</a></li>
+                </ul>
+            </div>
+            <div class="container_right">
+                <div class="login">
+                    <a href="http://order.mi.com/site/login">登陆</a><span>|</span><a href="https://account.xiaomi.com/pass/register">注册</a>
+                </div>
+                <div class="shopping"></div>
+            </div>
+        </div>
+    </header>
+    
+    <script>
+
+        // window.onload = addTarget();
+        // function addTarget(){
+        //     let aA= document.getElementsByTagName('a');
+        //     for (let i = 0;i<aA.length-1;i++) {
+        //         aA[i].setAttribute("target","_blank");
+        //     }
+        // }
+
+    </script>
+
+</body>
+</html>
