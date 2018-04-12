@@ -25,7 +25,12 @@
             text-decoration: none;
             target: _blank;
         }
-        
+
+        input{
+            padding: 0;
+        }
+
+        /*头部样式*/
         .header{
             widows: 100%;
             height: 40px;
@@ -49,9 +54,9 @@
         }
         
         .container .container_right{
-            width: 210px;
+            width: 277px;
             height: 40px;
-            background: pink;
+            /*background: pink;*/
             float: right;
 
         }
@@ -74,7 +79,7 @@
         }
 
         .container .container_right .login{
-            width: 68px;
+            width: 142px;
             height: 40px;
             /*background: gray;*/
             line-height: 40px;
@@ -91,19 +96,170 @@
 
         .container .container_right .login span{
             color: #424242;
-            margin: 0 4px;
+            margin: 0 6px;
         }
 
         .container .container_right .shopping{
             width: 120px;
             height: 40px;
             background: #424242;
+            float: right;
+            margin-left: 15px;
+            line-height: 40px;
+            text-align: center;
+            color: #b0b0b0;
+            position: relative;
+            cursor: pointer;
+
+        }
+
+        .container .container_right .shopping .shoppingDetails{
+            width: 320px;
+            height: 100px;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            position: absolute;
+            top: 40px;
+            right: 0px;
+            line-height: 100px;
+            cursor: default;
+            display: none;
+        }
+        :hover .iconfont{
+            color: #f60;
+        }
+
+        .container .container_right .shopping:hover .car{
+            color: #f60;
+        }
+
+        .container .container_right .shopping:hover{
+            background:#fff;
+        }
+
+        /*
+        .container .container_right .shopping:hover .shoppingDetails{
+            display: block;
+        }
+        改用jQuery做*/
+
+        /*nav导航栏样式*/
+        .nav{
+            width: 100%;
+            height: 55px;
+            /*background: gray;*/
+            margin:23px 0;
+        }
+
+        .nav .wrap{
+            width: 1226px;
+            height: 55px;
+            margin: 0 auto;
+            /*background: yellow;*/
+        }
+
+        .nav .wrap .logo{
+            width: 55px;
+            height: 55px;
             float: left;
         }
+
+        .nav .wrap .logo a{
+            display: block;
+            width: 55px;
+            height: 55px;
+            background: url("./image/mi-logo.png") #ff6700 center;
+
+        }
+
+        .nav .wrap .main{
+            width: 630px;
+            height: 55px;
+            /*background: pink;*/
+            float: left;
+            margin-left: 200px;
+        }
+
+        .nav .wrap .main li{
+            float: left;
+            line-height: 55px;
+            color: #333;
+            font-size: 16px;
+        }
         
+        .nav .wrap .main li a{
+            padding: 15px 8px;
+            color: #333;
+        }
+
+        .nav .wrap .main li a:hover{
+            color: #f60;
+        }
+
+        .nav .wrap .search{
+            width: 300px;
+            height: 50px;
+            /*background: pink;*/
+            float: right;
+        }
+
+        .nav .wrap .search:hover .input input{
+            border-color: #bbb;
+        }
+
+        .nav .wrap .search:hover .find{
+            border-color: #bbb;
+        }
+
+        .nav .wrap .search .input{
+            width: 245px;
+            height: 50px;
+            /*background: gray;*/
+            float: left;
+        }
+
+        .nav .wrap .search .input input{
+            width: 244px;
+            height: 48px;
+            outline: none;
+            border: 1px solid #ddd;
+            border-right: 0;
+            text-indent: 10px;
+            font-size: 12px;
+            font-family: "microsoft yahei";
+            transition:.2s;
+        }
+
+        .nav .wrap .search .find{
+            width: 53px;
+            height: 48px;
+            /*background: pink;*/
+            float: left;
+            border: 1px solid #ddd;
+            text-align: center;
+            line-height: 53px;
+            cursor: pointer;
+            transition:.2s;
+        }
+
+        .nav .wrap .search .find:hover{
+            border-color: #f60;
+            background: #f60;
+        }
+
+        .nav .wrap .search .find:hover .iconfont{
+            color: #fff;
+        }
+
+        .nav .wrap .search .find .iconfont{
+            color: #616161;
+            font-size: 24px;
+            transition:.2s;
+        }
 
     </style>
     <link rel="stylesheet" href="css/iconfont/iconfont.css">
+    <script src="js/jquery-3.3.1.js"></script>
 </head>
 <body>
     <!--顶部内容-->
@@ -123,23 +279,61 @@
             </div>
             <div class="container_right">
                 <div class="login">
-                    <a href="http://order.mi.com/site/login">登陆</a><span>|</span><a href="https://account.xiaomi.com/pass/register">注册</a>
+                    <a href="http://order.mi.com/site/login">登陆</a><span>|</span><a href="https://account.xiaomi.com/pass/register">注册</a><span>|</span><a
+                        href="https://order.mi.com/message/list">消息通知</a>
                 </div>
-                <div class="shopping"></div>
+                <div class="shopping">
+                    <i class="iconfont">&#xe611</i>
+                    <span class="car">购物车(<span id="num">0</span>)</span>
+                    <div class="shoppingDetails">
+                        购物车中还没有商品，赶紧选购吧！
+                    </div>
+                </div>
             </div>
         </div>
     </header>
-    
+
+    <!--导航内容-->
+    <nav class="nav">
+        <div class="wrap">
+            <div class="logo">
+                <a href="https://www.mi.com/index.html"></a>
+            </div>
+            <div class="main">
+                <ul>
+                    <li><a href="javascript:;">小米手机</a></li>
+                    <li><a href="javascript:;">红米</a></li>
+                    <li><a href="javascript:;>电视</a></li>
+                    <li><a href="javascript:;">笔记本</a></li>
+                    <li><a href="javascript:;">盒子</a></li>
+                    <li><a href="javascript:;">新品</a></li>
+                    <li><a href="javascript:;">路由器</a></li>
+                    <li><a href="javascript:;">智能硬件</a></li>
+                    <li><a href="javascript:;">服务</a></li>
+                    <li><a href="javascript:;">社区</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <div class="input">
+                    <input type="text">
+                </div>
+                <div class="find">
+                    <i class="iconfont">&#xe6bf;</i>
+                </div>
+            </div>
+        </div>
+    </nav>
     <script>
-
-        // window.onload = addTarget();
-        // function addTarget(){
-        //     let aA= document.getElementsByTagName('a');
-        //     for (let i = 0;i<aA.length-1;i++) {
-        //         aA[i].setAttribute("target","_blank");
-        //     }
-        // }
-
+        // 购物车下拉内容特效
+        (function(){
+            var $shopping=$(".container .container_right .shopping");
+            var $shoppingDetails=$(".container .container_right .shopping .shoppingDetails");
+            $shopping.hover(function () {
+                $shoppingDetails.slideDown();
+            },function () {
+                $shoppingDetails.slideUp();
+            })
+        })()
     </script>
 
 </body>
