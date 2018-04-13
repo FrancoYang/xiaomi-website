@@ -4,262 +4,10 @@
     <meta charset="UTF-8">
     <title>仿小米商城官网</title>
     <base target="_blank">
-    <style>
-        /*清除默认样式*/
-        body,h1,h2,p{
-            margin: 0;
-        }
-        
-        ul{
-            margin: 0;
-            padding: 0;
-            list-style:none;
-        }
-        
-        body{
-            font-size: 12px;
-            font-family: "microsoft yahei";
-        }
-        
-        a{
-            text-decoration: none;
-            target: _blank;
-        }
-
-        input{
-            padding: 0;
-        }
-
-        /*头部样式*/
-        .header{
-            widows: 100%;
-            height: 40px;
-            background: #333;
-            min-width: 1226px;
-        }
-        
-        .container{
-            width: 1226px;
-            height: 40px;
-            /*background:yellow;*/
-            margin: 0 auto;
-        }
-        
-        .container .container_left{
-            width: 600px;
-            height: 40px;
-            /*background: gray;*/
-            float: left;
-            line-height: 40px;
-        }
-        
-        .container .container_right{
-            width: 277px;
-            height: 40px;
-            /*background: pink;*/
-            float: right;
-
-        }
-        
-        .container .container_left li{
-            float: left;
-        }
-
-        .container .container_left li a{
-            color: #b0b0b0;
-        }
-
-        .container .container_left li span{
-            color: #424242;
-            margin: 0 6px;
-        }
-
-        .container .container_left li a:hover{
-            color: #fff;
-        }
-
-        .container .container_right .login{
-            width: 142px;
-            height: 40px;
-            /*background: gray;*/
-            line-height: 40px;
-            float: left;
-        }
-
-        .container .container_right .login a{
-            color: #b0b0b0;
-        }
-
-        .container .container_right .login a:hover{
-            color: #fff;
-        }
-
-        .container .container_right .login span{
-            color: #424242;
-            margin: 0 6px;
-        }
-
-        .container .container_right .shopping{
-            width: 120px;
-            height: 40px;
-            background: #424242;
-            float: right;
-            margin-left: 15px;
-            line-height: 40px;
-            text-align: center;
-            color: #b0b0b0;
-            position: relative;
-            cursor: pointer;
-
-        }
-
-        .container .container_right .shopping .shoppingDetails{
-            width: 320px;
-            height: 100px;
-            background: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-            position: absolute;
-            top: 40px;
-            right: 0px;
-            line-height: 100px;
-            cursor: default;
-            display: none;
-        }
-        :hover .iconfont{
-            color: #f60;
-        }
-
-        .container .container_right .shopping:hover .car{
-            color: #f60;
-        }
-
-        .container .container_right .shopping:hover{
-            background:#fff;
-        }
-
-        /*
-        .container .container_right .shopping:hover .shoppingDetails{
-            display: block;
-        }
-        改用jQuery做*/
-
-        /*nav导航栏样式*/
-        .nav{
-            width: 100%;
-            height: 55px;
-            /*background: gray;*/
-            margin:23px 0;
-        }
-
-        .nav .wrap{
-            width: 1226px;
-            height: 55px;
-            margin: 0 auto;
-            /*background: yellow;*/
-        }
-
-        .nav .wrap .logo{
-            width: 55px;
-            height: 55px;
-            float: left;
-        }
-
-        .nav .wrap .logo a{
-            display: block;
-            width: 55px;
-            height: 55px;
-            background: url("./image/mi-logo.png") #ff6700 center;
-
-        }
-
-        .nav .wrap .main{
-            width: 630px;
-            height: 55px;
-            /*background: pink;*/
-            float: left;
-            margin-left: 200px;
-        }
-
-        .nav .wrap .main li{
-            float: left;
-            line-height: 55px;
-            color: #333;
-            font-size: 16px;
-        }
-        
-        .nav .wrap .main li a{
-            padding: 15px 8px;
-            color: #333;
-        }
-
-        .nav .wrap .main li a:hover{
-            color: #f60;
-        }
-
-        .nav .wrap .search{
-            width: 300px;
-            height: 50px;
-            /*background: pink;*/
-            float: right;
-        }
-
-        .nav .wrap .search:hover .input input{
-            border-color: #bbb;
-        }
-
-        .nav .wrap .search:hover .find{
-            border-color: #bbb;
-        }
-
-        .nav .wrap .search .input{
-            width: 245px;
-            height: 50px;
-            /*background: gray;*/
-            float: left;
-        }
-
-        .nav .wrap .search .input input{
-            width: 244px;
-            height: 48px;
-            outline: none;
-            border: 1px solid #ddd;
-            border-right: 0;
-            text-indent: 10px;
-            font-size: 12px;
-            font-family: "microsoft yahei";
-            transition:.2s;
-        }
-
-        .nav .wrap .search .find{
-            width: 53px;
-            height: 48px;
-            /*background: pink;*/
-            float: left;
-            border: 1px solid #ddd;
-            text-align: center;
-            line-height: 53px;
-            cursor: pointer;
-            transition:.2s;
-        }
-
-        .nav .wrap .search .find:hover{
-            border-color: #f60;
-            background: #f60;
-        }
-
-        .nav .wrap .search .find:hover .iconfont{
-            color: #fff;
-        }
-
-        .nav .wrap .search .find .iconfont{
-            color: #616161;
-            font-size: 24px;
-            transition:.2s;
-        }
-
-    </style>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/iconfont/iconfont.css">
     <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/index.js"></script>
 </head>
 <body>
     <!--顶部内容-->
@@ -279,7 +27,7 @@
             </div>
             <div class="container_right">
                 <div class="login">
-                    <a href="http://order.mi.com/site/login">登陆</a><span>|</span><a href="https://account.xiaomi.com/pass/register">注册</a><span>|</span><a
+                    <a href="http://order.mi.com/site/login">登录</a><span>|</span><a href="https://account.xiaomi.com/pass/register">注册</a><span>|</span><a
                         href="https://order.mi.com/message/list">消息通知</a>
                 </div>
                 <div class="shopping">
@@ -295,6 +43,7 @@
 
     <!--导航内容-->
     <nav class="nav">
+        <!--导航栏-->
         <div class="wrap">
             <div class="logo">
                 <a href="https://www.mi.com/index.html"></a>
@@ -303,7 +52,7 @@
                 <ul>
                     <li><a href="javascript:;">小米手机</a></li>
                     <li><a href="javascript:;">红米</a></li>
-                    <li><a href="javascript:;>电视</a></li>
+                    <li><a href="javascript:;">电视</a></li>
                     <li><a href="javascript:;">笔记本</a></li>
                     <li><a href="javascript:;">盒子</a></li>
                     <li><a href="javascript:;">新品</a></li>
@@ -316,25 +65,72 @@
             <div class="search">
                 <div class="input">
                     <input type="text">
+                    <div class="content">
+                        <ul>
+                            <li><a href="#">小米手机6<span>约有29件</span></a></li>
+                            <li><a href="#">小米手机5X<span>约有8件</span></a></li>
+                            <li><a href="#">红米note 4X<span>约有14件</span></a></li>
+                            <li><a href="#">红米手机4X<span>约有9件</span></a></li>
+                            <li><a href="#">小米Max 2<span>约有5件</span></a></li>
+                            <li><a href="#">小米电视4C<span>约有2件</span></a></li>
+                            <li><a href="#">电视32英寸<span>约有1件</span></a></li>
+                            <li><a href="#">笔记本pro<span>约有3件</span></a></li>
+                            <li><a href="#">空气净化器<span>约有17件</span></a></li>
+                            <li><a href="#">净水器<span>约有9件</span></a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="find">
                     <i class="iconfont">&#xe6bf;</i>
                 </div>
             </div>
         </div>
+
+        <!--导航产品信息-->
+        <div class="products">
+            <div class="productsMain">
+                <ul>
+                    <li>
+                        <a href="" class="p_img"><img src="image/nav/xiaomi01.jpg" alt=""></a>
+                        <a href="" class="p_title">小米Max</a>
+                        <p class="p_price">1299元起</p>
+                        <div class="p_border"></div>
+                    </li>
+                    <li>
+                        <a href="" class="p_img"><img src="image/nav/xiaomi02.jpg" alt=""></a>
+                        <a href="" class="p_title">小米手机5</a>
+                        <p class="p_price">1299元起</p>
+                        <div class="p_border"></div>
+                    </li>
+                    <li>
+                        <a href="" class="p_img"><img src="image/nav/xiaomi03.jpg" alt=""></a>
+                        <a href="" class="p_title">小米手机4c</a>
+                        <p class="p_price">1299元起</p>
+                        <div class="p_border"></div>
+                    </li>
+                    <li>
+                        <a href="" class="p_img"><img src="image/nav/xiaomi01.jpg" alt=""></a>
+                        <a href="" class="p_title">小米Max</a>
+                        <p class="p_price">1299元起</p>
+                        <div class="p_border"></div>
+                    </li>
+                    <li>
+                        <a href="" class="p_img"><img src="image/nav/xiaomi02.jpg" alt=""></a>
+                        <a href="" class="p_title">小米手机5</a>
+                        <p class="p_price">1299元起</p>
+                        <div class="p_border"></div>
+                    </li>
+                    <li>
+                        <a href="" class="p_img"><img src="image/nav/xiaomi03.jpg" alt=""></a>
+                        <a href="" class="p_title">小米手机4c</a>
+                        <p class="p_price">1299元起</p>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
     </nav>
-    <script>
-        // 购物车下拉内容特效
-        (function(){
-            var $shopping=$(".container .container_right .shopping");
-            var $shoppingDetails=$(".container .container_right .shopping .shoppingDetails");
-            $shopping.hover(function () {
-                $shoppingDetails.slideDown();
-            },function () {
-                $shoppingDetails.slideUp();
-            })
-        })()
-    </script>
+
 
 </body>
 </html>
