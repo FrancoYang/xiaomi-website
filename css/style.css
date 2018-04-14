@@ -15,6 +15,11 @@ a{
     text-decoration: none;
 }
 
+a img{
+    display: block;
+    border: none; /*兼容IE*/
+}
+
 input{
     padding: 0;
 }
@@ -118,7 +123,7 @@ body{
     line-height: 100px;
     cursor: default;
     display: none;
-    z-index: 1;
+    z-index: 10;
 }
 .container .container_right .shopping:hover .iconfont{
     color: #f60;
@@ -141,7 +146,7 @@ body{
 /*nav导航栏样式*/
 .nav{
     width: 100%;
-    height: 55px;
+    height: 100px;
     /*background: gray;*/
 
 }
@@ -186,7 +191,7 @@ body{
 }
 
 .nav .wrap .main li a{
-    padding: 15px 10px;
+    padding: 26px 10px 38px;
     color: #333;
 }
 
@@ -268,6 +273,7 @@ body{
     top: 55;
     left: 0;
     display: none;
+    z-index: 1;
 }
 
 .nav .wrap .search .input .content li{
@@ -314,6 +320,10 @@ body{
     background: #fff;
     border: 1px solid rgb(224,224,224);
     box-shadow:0 3px 4px rgba(0,0,0,0.18);
+    display: none;
+    min-width: 1226px;
+    position: relative;
+    z-index: 9;
 
 }
 
@@ -322,6 +332,17 @@ body{
     height: 230px;
     margin: 0 auto;
     /*background: pink;*/
+    position: relative;;
+}
+
+.nav .products .productsMain ul{
+    width: 1226px;
+    height: 230px;
+    /*background: green;*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
 }
 
 .nav .products .productsMain li{
@@ -333,6 +354,11 @@ body{
 
 .nav .products .productsMain li a{
     display: block;
+}
+
+.nav .products .productsMain li a img{
+    width: 160px;
+    height: 110px;
 }
 
 .nav .products .productsMain li .p_title{
@@ -350,9 +376,192 @@ body{
 .nav .products .productsMain li .p_border{
     width: 0;
     height: 100px;
-    border-right: 1px solid #ddd;
+    border-right: 1px solid #e5e5e5;
     position: absolute;
     top: 30px;
     right: 0;
-    /*或者用after伪类也可以做*/
+    /*或者用after伪类（content:""）也可以做,但是这样最后一个会多出来一个竖线*/
+}
+
+/*banner轮播图样式*/
+.banner{
+    width: 1226px;
+    height: 460px;
+    /*background: yellow;*/
+    margin: 0 auto;
+    position: relative;
+}
+
+.b-main{
+    width: 1226px;
+    height: 460px;
+    position: relative;
+}
+
+.b-main .b-m-pic{
+    width: 1226px;
+    height: 460px;
+
+}
+
+.b-main .b-m-pic li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.b-main .b-m-btn div{
+    width: 41px;
+    height: 69px;
+    /*background: red;*/
+    position: absolute;
+    top:50%;
+    margin-top: -34px;
+    cursor: pointer;
+    background: url("../image/banner/btn.png") no-repeat;
+
+}
+
+.b-main .b-m-btn .left{
+    left: 235px;
+    border-radius:0 2px 2px 0;
+    background-position: -84px 0;
+}
+
+.b-main .b-m-btn .right{
+    right: 0;
+    border-radius:2px 0 0 2px;
+    background-position: -121px 0;
+}
+
+.b-main .b-m-btn .left:hover{
+    background-position: 0 0;
+}
+
+.b-main .b-m-btn .right:hover{
+    background-position: -42px 0;
+}
+
+.b-main .b-m-tab{
+    width: 100px;
+    height: 10px;
+    /*border: 1px solid red;*/
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+.b-main .b-m-tab li{
+    width: 6px;
+    height: 6px;
+    background: gray;
+    background: rgba(0,0,0,0.4);
+    border-radius:50%;
+    border:2px solid #999;
+    float: left;
+    margin: 0 4px;
+    cursor: pointer;
+
+}
+
+.b-main .b-m-tab li:hover{
+    background: #e5e5e5;
+    border-color: #bbb;
+}
+
+.b-main .b-m-tab li.click{
+    background: #e5e5e5;
+    border-color: #bbb;
+}
+
+/*二级导航样式*/
+.b-nav{
+    width: 235px;
+    height: 420px;
+    background: gray;
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 0;
+}
+
+.b-nav>ul>li{
+    height: 42px;
+    line-height: 42px;
+}
+
+.b-nav>ul>li>a{
+    height: 42px;
+    display: block;
+    padding-left: 30px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.b-nav>ul>li>a>span{
+    float: right;
+    margin-right: 24px;
+    font-size: 12px;
+    color: #bbb;
+}
+
+.b-nav>ul>li:hover{
+    background: #f60;
+}
+
+.b-nav .navDetails{
+    width: 520px;
+    height: 459px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 235px;
+    border-top: 1px solid #bbb;
+    box-shadow:0 2px 2px #999;
+}
+
+.b-nav ul li ul{
+    width: 250px;
+    height: 447px;
+    padding: 6px 0;
+}
+
+.b-nav ul li .navDetails li{
+    height: 74px;
+    line-height: 74px;
+    /*background: gray;*/
+}
+
+.b-nav ul li .navDetails .ndimg{
+    float: left;
+    padding-left: 13px;
+}
+
+.b-nav ul li .navDetails .ndimg img{
+    float: left;
+    margin-top: 17px;
+}
+
+.b-nav ul li .navDetails .ndimg span{
+    float: left;
+    padding: 0 30px 0 22px;
+    font-size: 14px;
+    color: #333;
+}
+
+.b-nav ul li .navDetails .ndbuy{
+    float: right;
+    width: 60px;
+    height: 24px;
+    border: 1px solid #f60;
+    text-align: center;
+    line-height: 24px;
+    margin-top: 25px;
+    margin-right: 10px;
+}
+
+.b-nav ul li .navDetails .ndimg:hover span{
+    color: #f60;
 }
