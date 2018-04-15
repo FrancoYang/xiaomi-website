@@ -91,6 +91,7 @@ $(function () {
             },5000)
         }
         slide();
+
         //当鼠标移动到轮播图上定时器停止，离开时继续播放轮播图
         var $bMain=$(".b-main");
         $bMain.hover(function () {
@@ -99,5 +100,12 @@ $(function () {
             slide();
         })
 
+        //左侧二级导航
+        var $navLi=$(".b-nav>ul>li");
+        $navLi.hover(function () {
+            $(this).find(".navDetails").show();
+        },function () {
+            $(this).find(".navDetails").hide();
+        })
     })()
 })

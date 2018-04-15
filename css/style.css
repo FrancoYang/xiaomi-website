@@ -512,7 +512,7 @@ body{
 }
 
 .b-nav .navDetails{
-    width: 520px;
+    width: 512px;
     height: 459px;
     background: #fff;
     position: absolute;
@@ -520,12 +520,15 @@ body{
     left: 235px;
     border-top: 1px solid #bbb;
     box-shadow:0 2px 2px #999;
+    display: none;
 }
 
 .b-nav ul li ul{
     width: 250px;
     height: 447px;
     padding: 6px 0;
+    float: left;
+    margin-left: 6px;
 }
 
 .b-nav ul li .navDetails li{
@@ -546,9 +549,10 @@ body{
 
 .b-nav ul li .navDetails .ndimg span{
     float: left;
-    padding: 0 30px 0 22px;
+    padding: 0 36px 0 12px;
     font-size: 14px;
     color: #333;
+    transition:.3s;
 }
 
 .b-nav ul li .navDetails .ndbuy{
@@ -560,8 +564,94 @@ body{
     line-height: 24px;
     margin-top: 25px;
     margin-right: 10px;
+    transitoin:.3s;
+    color: #f60;
 }
 
 .b-nav ul li .navDetails .ndimg:hover span{
     color: #f60;
+}
+
+.b-nav ul li .navDetails .ndbuy:hover{
+    background: #f60;
+    color:#fff;
+}
+
+/*热点图样式*/
+.hot{
+    width: 1226px;
+    height: 170px;
+    /*background: yellow;*/
+    margin: 15px auto;
+}
+
+.hot .h-list{
+    width: 215px;
+    height: 150px;
+    background: #5f5750;
+    float: left;
+    padding: 10px;
+}
+
+.hot .h-list li{
+    height: 65px;
+    width: 60px;
+    /*background: pink;*/
+    float: left;
+    padding: 5px;
+    position: relative;
+}
+
+.hot .h-list li.l1:before,.hot .h-list li.l2:before,.hot .h-list li.l4:before,.hot .h-list li.l5:before{
+    content:"";
+    width: 0;
+    height: 64px;
+    border-right: 1px solid #665e57;
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 0;
+}
+
+.hot .h-list li.l1:after,.hot .h-list li.l2:after,.hot .h-list li.l3:after{
+    content:"";
+    width: 64px;
+    height: 0;
+    display: block;
+    border-bottom: 1px solid #665e57;
+    position: absolute;
+    bottom: -3px;
+    left: 2px;
+}
+
+.hot .h-list li a{
+    height: 65px;
+    width: 60px;
+    display: block;
+    text-align: center;
+    color: #bbb;
+}
+
+.hot .h-list li a .iconfont{
+    display: block;
+    font-size: 22px;
+    padding-top: 14px;
+}
+
+.hot .h-list li a .h-list-title{
+    display: block;
+    padding-top: 6px;
+}
+
+.hot .h-img{
+    width: 316px;
+    height: 170px;
+    /*background: red;*/
+    float: left;
+    margin-left: 14px;
+}
+
+.hot .h-img img{
+    width: 316px;
+    height: 170px;
 }
