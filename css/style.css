@@ -411,6 +411,11 @@ body{
     display: none;
 }
 
+.b-main .b-m-pic li img{
+    width: 1226px;
+    height: 460px;
+}
+
 .b-main .b-m-btn div{
     width: 41px;
     height: 69px;
