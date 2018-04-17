@@ -233,7 +233,28 @@ body{
     font-size: 12px;
     font-family: "microsoft yahei";
     transition:.2s;
+}
 
+/*.input input::placeholder{*/
+    /*text-align: right;*/
+    /*background: rgba(238,238,238);*/
+/*}*/
+
+.hotWords{
+    position: absolute;
+    left: 139px;
+    top: 18px;
+    color: #757575;
+    background: #eee;
+}
+
+.hotWords a{
+    color: #757575;
+}
+
+.hotWords a:hover{
+    background: #f60;
+    color: #fff;
 }
 
 .nav .wrap .search .find{
@@ -517,7 +538,7 @@ body{
 }
 
 .b-nav .navDetails{
-    width: 512px;
+    width: 768px;
     height: 459px;
     background: #fff;
     position: absolute;
@@ -550,6 +571,8 @@ body{
 .b-nav ul li .navDetails .ndimg img{
     float: left;
     margin-top: 17px;
+    width: 40px;
+    height: 40px;
 }
 
 .b-nav ul li .navDetails .ndimg span{
@@ -560,27 +583,11 @@ body{
     transition:.3s;
 }
 
-.b-nav ul li .navDetails .ndbuy{
-    float: right;
-    width: 60px;
-    height: 24px;
-    border: 1px solid #f60;
-    text-align: center;
-    line-height: 24px;
-    margin-top: 25px;
-    margin-right: 10px;
-    transitoin:.3s;
-    color: #f60;
-}
 
 .b-nav ul li .navDetails .ndimg:hover span{
     color: #f60;
 }
 
-.b-nav ul li .navDetails .ndbuy:hover{
-    background: #f60;
-    color:#fff;
-}
 
 /*热点图样式*/
 .hot{
@@ -637,6 +644,10 @@ body{
     color: #bbb;
 }
 
+.hot .h-list li a:hover{
+    color:#fff;
+}
+
 .hot .h-list li a .iconfont{
     display: block;
     font-size: 22px;
@@ -659,4 +670,8 @@ body{
 .hot .h-img img{
     width: 316px;
     height: 170px;
+}
+
+.hot .h-img img:hover{
+    box-shadow:0px 5px 20px #aaa;
 }

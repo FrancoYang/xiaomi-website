@@ -15,12 +15,15 @@ $(function () {
         var $search=$(".nav .wrap .search");
         var $input=$(".nav .wrap .search .input input");
         var $content=$(".nav .wrap .search .input .content");
+        var $hotWords=$(".hotWords");
         $input.focus(function () {
             $search.addClass("focus");
             $content.fadeIn();
+            $hotWords.hide();
         }).blur(function () {
             $search.removeClass("focus");
             $content.fadeOut();
+            $hotWords.show();
         })
 
         //鼠标滑动到商品大类时，下拉显示推荐商品
